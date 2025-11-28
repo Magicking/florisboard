@@ -95,6 +95,8 @@
     <string name="quick_action__toggle_autocorrect__tooltip">Toggle autocorrect</string>
     <string name="quick_action__voice_input" comment="Please mind the limited available space for the quick action strings">Voice input</string>
     <string name="quick_action__voice_input__tooltip" comment="IME stands for Input Method Editor and is indirectly equivalent to 'keyboard'.">Open voice input provider</string>
+    <string name="quick_action__llm_input" comment="Please mind the limited available space for the quick action strings">AI input</string>
+    <string name="quick_action__llm_input__tooltip" comment="LLM stands for Large Language Model. This opens a panel to use AI to help generate text.">Open AI input panel</string>
     <string name="quick_action__one_handed_mode" comment="Please mind the limited available space for the quick action strings">One-handed</string>
     <string name="quick_action__one_handed_mode__tooltip">Toggle one-handed mode</string>
     <string name="quick_action__drag_marker" comment="This action is only used as a placeholder in the actions editor drag and drop screen and only visible in debug mode">Drag marker</string>
@@ -523,6 +525,26 @@
     <string name="settings__udm__dialog__shortcut_error_invalid" comment="Error label for the shortcut in the user dictionary add/edit dialog">Please enter a shortcut matching {regex}</string>
     <string name="settings__udm__dialog__locale_label" comment="Label for the language code in the user dictionary add/edit dialog">Language code (optional)</string>
     <string name="settings__udm__dialog__locale_error_invalid" comment="Error label for the language code in the user dictionary add/edit dialog">This language code does not conform to the expected syntax. The code must either be a language only (like en), a language and country (like en_US) or a language, country, and script (like en_US-script).</string>
+
+    <!-- LLM settings -->
+    <string name="settings__llm__title" comment="Title of LLM settings screen">AI Input</string>
+    <string name="pref__llm__title" comment="Preference group title">AI Input Settings</string>
+    <string name="pref__llm__enabled__label" comment="Preference title">Enable AI input</string>
+    <string name="pref__llm__enabled__summary" comment="Preference summary">Use AI to help generate and improve text</string>
+    <string name="pref__llm__provider__label" comment="Preference title">AI Provider</string>
+    <string name="pref__llm__provider__summary" comment="Preference summary">Select the AI provider to use for text generation</string>
+    <string name="pref__llm__api_key__label" comment="Preference title">API Key</string>
+    <string name="pref__llm__api_key__summary" comment="Preference summary">Enter your API key for the selected provider</string>
+    <string name="pref__llm__api_key__hint" comment="Hint text for API key input">Enter API key</string>
+    <string name="pref__llm__model__label" comment="Preference title">Model</string>
+    <string name="pref__llm__model__summary" comment="Preference summary">Select the AI model to use</string>
+    <string name="pref__llm__base_url__label" comment="Preference title">Custom API Base URL</string>
+    <string name="pref__llm__base_url__summary" comment="Preference summary">Optional: Set a custom API endpoint URL</string>
+    <string name="pref__llm__base_url__hint" comment="Hint text for base URL input">https://api.example.com/v1</string>
+    <string name="enum__llm_provider__none">None</string>
+    <string name="enum__llm_provider__openai">OpenAI</string>
+    <string name="enum__llm_provider__anthropic">Anthropic</string>
+    <string name="enum__llm_provider__custom">Custom (OpenAI-compatible)</string>
 
     <string name="settings__gestures__title" comment="Title of Gestures screen">Gestures &amp; Glide typing</string>
     <string name="pref__glide__title" comment="Preference group title">Glide typing</string>
