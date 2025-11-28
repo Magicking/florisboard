@@ -31,6 +31,7 @@ import dev.patrickgold.florisboard.ime.keyboard.KeyboardMode
 import dev.patrickgold.florisboard.ime.keyboard.SpaceBarMode
 import dev.patrickgold.florisboard.ime.landscapeinput.LandscapeInputUiMode
 import dev.patrickgold.florisboard.ime.media.emoji.EmojiHistory
+import dev.patrickgold.florisboard.ime.llm.LlmProvider
 import dev.patrickgold.florisboard.ime.media.emoji.EmojiSkinTone
 import dev.patrickgold.florisboard.ime.media.emoji.EmojiSuggestionType
 import dev.patrickgold.florisboard.ime.nlp.SpellingLanguageMode
@@ -456,6 +457,26 @@ private val ENUM_DISPLAY_ENTRIES = mapOf<Pair<KClass<*>, String>, @Composable ()
             entry(
                 key = LandscapeInputUiMode.DYNAMICALLY_SHOW,
                 label = stringRes(R.string.enum__landscape_input_ui_mode__dynamically_show),
+            )
+        }
+    },
+    LlmProvider::class to DEFAULT to {
+        listPrefEntries {
+            entry(
+                key = LlmProvider.NONE,
+                label = stringRes(R.string.enum__llm_provider__none),
+            )
+            entry(
+                key = LlmProvider.OPENAI,
+                label = stringRes(R.string.enum__llm_provider__openai),
+            )
+            entry(
+                key = LlmProvider.ANTHROPIC,
+                label = stringRes(R.string.enum__llm_provider__anthropic),
+            )
+            entry(
+                key = LlmProvider.CUSTOM,
+                label = stringRes(R.string.enum__llm_provider__custom),
             )
         }
     },

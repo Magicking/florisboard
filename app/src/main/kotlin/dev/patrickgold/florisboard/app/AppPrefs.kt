@@ -34,6 +34,7 @@ import dev.patrickgold.florisboard.ime.input.InputFeedbackActivationMode
 import dev.patrickgold.florisboard.ime.keyboard.IncognitoMode
 import dev.patrickgold.florisboard.ime.keyboard.SpaceBarMode
 import dev.patrickgold.florisboard.ime.landscapeinput.LandscapeInputUiMode
+import dev.patrickgold.florisboard.ime.llm.LlmProvider
 import dev.patrickgold.florisboard.ime.media.emoji.EmojiHairStyle
 import dev.patrickgold.florisboard.ime.media.emoji.EmojiHistory
 import dev.patrickgold.florisboard.ime.media.emoji.EmojiSkinTone
@@ -628,6 +629,30 @@ abstract class FlorisPreferenceModel : PreferenceModel() {
         val subtypes = string(
             key = "localization__subtypes",
             default = "[]",
+        )
+    }
+
+    val llm = Llm()
+    inner class Llm {
+        val enabled = boolean(
+            key = "llm__enabled",
+            default = false,
+        )
+        val provider = enum(
+            key = "llm__provider",
+            default = LlmProvider.NONE,
+        )
+        val apiKey = string(
+            key = "llm__api_key",
+            default = "",
+        )
+        val model = string(
+            key = "llm__model",
+            default = "",
+        )
+        val baseUrl = string(
+            key = "llm__base_url",
+            default = "",
         )
     }
 

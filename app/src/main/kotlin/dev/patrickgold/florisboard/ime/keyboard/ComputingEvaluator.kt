@@ -45,6 +45,7 @@ import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.SelectAll
 import androidx.compose.material.icons.filled.SentimentSatisfiedAlt
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.SmartToy
 import androidx.compose.material.icons.filled.SpaceBar
 import androidx.compose.ui.graphics.vector.ImageVector
 import dev.patrickgold.florisboard.R
@@ -214,6 +215,9 @@ fun ComputingEvaluator.computeImageVector(data: KeyData): ImageVector? {
         }
         KeyCode.VOICE_INPUT -> {
             Icons.Default.KeyboardVoice
+        }
+        KeyCode.LLM_INPUT -> {
+            Icons.Default.SmartToy
         }
         KeyCode.IME_HIDE_UI -> {
             Icons.Default.KeyboardHide

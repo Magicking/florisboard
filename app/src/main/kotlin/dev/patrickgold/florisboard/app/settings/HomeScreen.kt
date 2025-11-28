@@ -24,6 +24,7 @@ import androidx.compose.material.icons.filled.Gesture
 import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.SentimentSatisfiedAlt
 import androidx.compose.material.icons.filled.SmartButton
+import androidx.compose.material.icons.filled.SmartToy
 import androidx.compose.material.icons.filled.Spellcheck
 import androidx.compose.material.icons.outlined.Build
 import androidx.compose.material.icons.outlined.Info
@@ -144,6 +145,11 @@ fun HomeScreen() = FlorisScreen {
             icon = Icons.Default.SentimentSatisfiedAlt,
             title = stringRes(R.string.settings__media__title),
             onClick = { navController.navigate(Routes.Settings.Media) },
+        )
+        Preference(
+            icon = Icons.Default.SmartToy,
+            title = stringRes(R.string.settings__llm__title),
+            onClick = { navController.navigate(Routes.Settings.Llm) },
         )
         Preference(
             icon = Icons.Default.Extension,
