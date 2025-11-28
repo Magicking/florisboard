@@ -22,6 +22,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import dev.patrickgold.florisboard.R
+import dev.patrickgold.florisboard.app.FlorisPreferenceStore
 import dev.patrickgold.florisboard.app.enumDisplayEntriesOf
 import dev.patrickgold.florisboard.ime.llm.LlmProvider
 import dev.patrickgold.florisboard.lib.compose.FlorisScreen
@@ -38,6 +39,8 @@ fun LlmScreen() = FlorisScreen {
     title = stringRes(R.string.settings__llm__title)
     previewFieldVisible = true
     iconSpaceReserved = false
+
+    val prefs by FlorisPreferenceStore
 
     content {
         FlorisInfoCard(
